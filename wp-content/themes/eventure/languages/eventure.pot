@@ -1,0 +1,344 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Eventure\n"
+"POT-Creation-Date: 2012-10-20 00:26-0800\n"
+"PO-Revision-Date: 2012-10-20 00:26-0800\n"
+"Last-Translator: Chris <chris@themolitor.com>\n"
+"Language-Team: The Molitor\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:4 ../archive.php:43
+msgid "Not Found"
+msgstr ""
+
+#: ../404.php:5
+msgid "The page you were looking for is no longer available."
+msgstr ""
+
+#: ../archive.php:29 ../single.php:80
+msgid "0 Comments"
+msgstr ""
+
+#: ../archive.php:29 ../single.php:80
+msgid "1 Comment"
+msgstr ""
+
+#: ../archive.php:29 ../single.php:80
+msgid "% Comments"
+msgstr ""
+
+#: ../archive.php:44
+msgid "Sorry, but you are looking for something that isn't here."
+msgstr ""
+
+#: ../calendar.php:64
+msgid "The End."
+msgstr ""
+
+#: ../comments.php:3
+msgid "Please do not load this page directly. Thanks!"
+msgstr ""
+
+#: ../comments.php:5
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: ../comments.php:10
+msgid "Comments"
+msgstr ""
+
+#: ../comments.php:26
+msgid "Leave a Reply"
+msgstr ""
+
+#: ../comments.php:26
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: ../comments.php:34
+msgid "You must be"
+msgstr ""
+
+#: ../comments.php:34
+msgid "logged in"
+msgstr ""
+
+#: ../comments.php:34
+msgid "to post a comment."
+msgstr ""
+
+#: ../comments.php:42
+msgid "Logged in as"
+msgstr ""
+
+#: ../comments.php:42
+msgid "Log out of this account"
+msgstr ""
+
+#: ../comments.php:42
+msgid "Log out"
+msgstr ""
+
+#: ../comments.php:48
+msgid "Name"
+msgstr ""
+
+#: ../comments.php:53
+msgid "Email (will not be published)"
+msgstr ""
+
+#: ../comments.php:58
+msgid "Website"
+msgstr ""
+
+#: ../functions.php:95
+msgid "Main Navigation Menu"
+msgstr ""
+
+#: ../functions.php:102
+msgid "Home"
+msgstr ""
+
+#: ../functions.php:133 ../functions.php:145 ../functions.php:158
+msgid "Current Page"
+msgstr ""
+
+#: ../functions.php:161
+msgid "Search Results"
+msgstr ""
+
+#: ../functions.php:163
+msgid "Posts tagged &#39;"
+msgstr ""
+
+#: ../functions.php:169
+msgid "Articles posted by"
+msgstr ""
+
+#: ../functions.php:171
+msgid "Error 404"
+msgstr ""
+
+#: ../functions.php:175
+msgid "Page"
+msgstr ""
+
+#: ../functions.php:186 ../sidebar.php:4
+msgid "Live Widgets"
+msgstr ""
+
+#: ../functions.php:202
+msgid "Theme Options"
+msgstr ""
+
+#: ../header.php:137
+msgid "Menu"
+msgstr ""
+
+#: ../navigation.php:2
+msgid "Next &rarr;"
+msgstr ""
+
+#: ../navigation.php:3
+msgid "&larr; Back"
+msgstr ""
+
+#: ../searchform.php:3
+msgid "Search Site"
+msgstr ""
+
+#: ../single.php:46
+msgid "Details"
+msgstr ""
+
+#: ../single.php:47
+msgid "Gallery"
+msgstr ""
+
+#: ../single.php:48
+msgid "Tags"
+msgstr ""
+
+#: ../single.php:49
+msgid "More"
+msgstr ""
+
+#: ../single.php:62
+msgid "Countdown Complete"
+msgstr ""
+
+#: ../single.php:69 ../archive.php:29
+msgid "Event Expired"
+msgstr ""
+
+#: ../single.php:74
+msgid "Get Directions"
+msgstr ""
+
+#: ../single.php:117
+msgid "Tweet"
+msgstr ""
+
+#: ../post-form.php:65
+msgid "has successfully been subitted for review."
+msgstr ""
+
+#: ../post-form.php:81
+msgid "has submitted a new post on"
+msgstr ""
+
+#: ../post-form.php:81
+msgid "titled"
+msgstr ""
+
+#: ../post-form.php:82
+msgid "Review"
+msgstr ""
+
+#: ../post-form.php:82
+msgid "here"
+msgstr ""
+
+#: ../post-form.php:83
+msgid "Review all pending posts here"
+msgstr ""
+
+#: ../post-form.php:84
+msgid 'You can turn off notifications like this on the "Front-end Submission Form" tab here'
+msgstr ""
+
+#: ../post-form.php:87
+msgid "Post Pending Review"
+msgstr ""
+
+#: ../post-form.php:109
+msgid "Your Name"
+msgstr ""
+
+#: ../post-form.php:114
+msgid "Your Email"
+msgstr ""
+
+#: ../post-form.php:114
+msgid "will not be published"
+msgstr ""
+
+#: ../post-form.php:121
+msgid "Event Title"
+msgstr ""
+
+#: ../post-form.php:126
+msgid "Date & Time"
+msgstr ""
+
+#: ../post-form.php:126 ../post-form.php:235
+msgid "Required"
+msgstr ""
+
+#: ../post-form.php:186
+msgid "Duration"
+msgstr ""
+
+#: ../post-form.php:191
+msgid "Cost"
+msgstr ""
+
+#: ../post-form.php:198
+msgid "Ages"
+msgstr ""
+
+#: ../post-form.php:203
+msgid "Address"
+msgstr ""
+
+#: ../post-form.php:210
+msgid "Event Type"
+msgstr ""
+
+#: ../post-form.php:211
+msgid "Select"
+msgstr ""
+
+#: ../post-form.php:215
+msgid "Keyword Tags"
+msgstr ""
+
+#: ../post-form.php:215
+msgid "separated, by, comma"
+msgstr ""
+
+#: ../post-form.php:222
+msgid "Web Link"
+msgstr ""
+
+#: ../post-form.php:229
+msgid "Details"
+msgstr ""
+
+#: ../post-form.php:234
+msgid "Two"
+msgstr ""
+
+#: ../post-form.php:241
+msgid "Submit for Review"
+msgstr ""
+
+#: ../include/post-meta.php:7
+msgid "Custom Post Options"
+msgstr ""
+
+#: ../include/post-meta.php:13
+msgid "Display Featured Image Instead of Map"
+msgstr ""
+
+#: ../include/post-meta.php:18
+msgid "Address: "
+msgstr ""
+
+#: ../include/post-meta.php:23
+msgid "Duration: "
+msgstr ""
+
+#: ../include/post-meta.php:24
+msgid "Example: 1 hour"
+msgstr ""
+
+#: ../include/post-meta.php:29
+msgid "Cost: "
+msgstr ""
+
+#: ../include/post-meta.php:30
+msgid "Example: $20"
+msgstr ""
+
+#: ../include/post-meta.php:35
+msgid "Ages: "
+msgstr ""
+
+#: ../include/post-meta.php:36
+msgid "Example: 21+"
+msgstr ""
+
+#: ../include/post-meta.php:41
+msgid "Web Link: "
+msgstr ""
+
+#: ../include/post-meta.php:42
+msgid "Full URL to website"
+msgstr ""
+
+#: ../XXXX.php:XXXX
+msgid "XXXX"
+msgstr ""
+
+#: ../XXXX.php:XXXX
+msgid "XXXX"
+msgstr ""

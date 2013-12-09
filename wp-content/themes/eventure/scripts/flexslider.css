@@ -1,0 +1,41 @@
+/*
+ * jQuery FlexSlider v1.8
+ * http://flex.madebymufffin.com
+ *
+ * Copyright 2011, Tyler Smith
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+/* FlexSlider Necessary Styles
+*********************************/ 
+#slider {width: 100%;}
+#slider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+#slider .slides img {max-width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+.no-js .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+#slider,
+#slider .slides {zoom: 1;}
+#slider .slides > li {position: relative; height: 100%; width: 100%;}
+
+.flex-direction-nav {position: absolute; width: 70px; height: 35px; top: 200px; left: 145px;}
+.flex-direction-nav li a {height: 35px; width: 35px; float: left; text-align: center; line-height: 35px; background: #000; color: #fff;}
+.flex-direction-nav li a:hover {color: #000;}
