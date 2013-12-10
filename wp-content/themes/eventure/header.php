@@ -19,6 +19,7 @@ $sidebarPosition = get_theme_mod('themolitor_customizer_sidebar_pos');
 $twoColumn = get_theme_mod('themolitor_customizer_two_columns');
 $customCSS = get_theme_mod('themolitor_customizer_css');
 $favicon = get_theme_mod('themolitor_customizer_favicon'); 
+$welcomeMsg = get_theme_mod('themolitor_customizer_welcome');
 ?>
 
 <?php if($favicon) { ?><link rel="icon" href="<?php echo $favicon; ?>" type="image/x-icon" /><?php } ?>
@@ -125,8 +126,6 @@ if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 <div class="dotted"></div>
 
 <div id="header">
-	<!--LOGO-->
-	<?php if($logo){?>	<a id="logo" href="<?php echo home_url(); ?>"><img src="<?php echo $logo;?>" alt="<?php bloginfo('name'); ?>" /></a><?php } ?>
 	<!--MENU-->
 	<?php if (has_nav_menu( 'main' ) ) { wp_nav_menu(array('theme_location' => 'main', 'container_id' => 'navigation', 'menu_id' => 'dropmenu')); }?>
 	<?php 
@@ -144,6 +143,22 @@ if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 		echo $menu_list;
     }
     ?>	
+
+    <div id="titlebar">
+		<!--DC FLAG-->
+		<img id="flagleft" src="assets/DC_flag_black.png" alt="dc flag">
+
+		<!--LOGO-->
+		<?php if($logo){?>	<a id="logo" href="<?php echo home_url(); ?>"><img src="<?php echo $logo;?>" alt="<?php bloginfo('name'); ?>" /></a><?php } ?>
+	
+		<!--TAGLINE--> 
+		<?php if($welcomeMsg){ ?> <div id="tagLine"><?php echo $welcomeMsg;?></div> <?php } ?> 
+
+		<!--DC FLAG-->
+		<img id="flagright" src="assets/DC_flag_black.png" alt="dc flag">
+
+	</div>
+
 </div><!--end header-->
 
 <div id="content">
