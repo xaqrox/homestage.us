@@ -26,12 +26,21 @@ Tags: light
 html {height: 100%}
 body {
 	color:#000; 
-	font-family: sans-serif;
+	font-family: Lekton;
 	background-color: #BBBBBB; 
 	background-image: url('images/back_pattern.png'); 
 	background-repeat: no-repeat; 
 	background-position: top left; 
 	background-attachment: fixed;
+}
+
+#callToAction {
+	background-color:#4B97D4;
+	color:#992A37;
+	text-align:center;
+	letter-spacing:0.5px;
+	margin-bottom: 8px;
+
 }
 
 /* -----A TAG STUFF----- */
@@ -43,7 +52,7 @@ a {
 }
 a:hover {text-decoration:none; color: #000;}
 
-p {font-size: 12px; font-family: sans-serif}
+p {font-size: 12px; font-family: Lekton,sans-serif}
 
 img {max-width: 100%;}
 
@@ -95,12 +104,16 @@ ul {list-style-type: square;}
 	margin: 50px auto; 
 	width:900px; 
 	position: relative; 
-	padding: 0 60px 135px; 
+	padding: 8px; 
 	background: #f8f8f8;
 	-webkit-box-shadow: 0px 2px 3px rgba(0,0,0,.3);
 	-moz-box-shadow: 0px 2px 3px rgba(0,0,0,.3);
 	box-shadow: 0px 2px 3px rgba(0,0,0,.3);
 }
+
+
+
+
 /*---------------------------------*/
 /*------- RESPONSIVE STUFF --------*/
 /*---------------------------------*/
@@ -125,18 +138,28 @@ body.single #sidebar {width: 280px;}
 }
 
 /*---------HEADER STUFF-----------*/
-#header {position: relative; top-margin: 0px;  margin-bottom: 20px; width:100%; height: 175px; clear:both;}
-a#logo  {float:left; z-index: 100; width: 34%; height: 100%; }
-a#logo img {display: block; height:98%; margin-left: auto; margin-right: auto;}
-#titlebar {float:left; height: 80%; clear:both;margin-top: 10px; width:100%;}
+#header {position: relative; top-margin: 0px;  margin-bottom: 8px; width:100%; height: 190px; clear:both;}
+a#logo  {float:left; z-index: 100; width: 20%; height: 100%; }
+a#logo img {display: block; height:100%; margin-left: auto; margin-right: auto;}
+#hstitle {float:left; width:60%; text-align: center; font-family: Lekton; font-size: 55px; letter-spacing: 10px; line-height: 140px;color:white;}
+#titleimg {display:none; float:left; width:40%; height:80%%;margin-left:10%; margin-right:10%;}
+#titlebar {background-image:url('https://s3.amazonaws.com/Homestage/2013/12/Wood-Background-Photos1_0.jpg'); float:left; height: 145px; clear:both;margin-top: 8px; width:100%;}
 img#flagleft {height:100%; width: 16%; float:left;}
 img#flagright {height: 100%; width: 16%; float:left;}
 
 /*---------------------------------*/
 /*------- RESPONSIVE STUFF --------*/
 /*---------------------------------*/
-@media screen and (max-width:1040px) {#header {padding: 50px 0 85px;}}/*/mediaquery*/
-@media screen and (max-width:890px) {#header {padding: 50px 0;}}/*/mediaquery*/
+@media screen and (max-width:1040px) {#header {padding: 50px 0 85px;}
+									#flagleft{visibility:hidden;}
+									#flagright{visibility: hidden;}
+									#tagLine{visibility:hidden;}
+									#titleimg{display:none;}
+									}/*/mediaquery*/
+@media screen and (max-width:890px) {#header {padding: 50px 0;}
+									#flagleft{visibility:hidden;}
+									#flagright{visibility: hidden;}
+									#tagLine{visibility:hidden;}}	/*/mediaquery*/
 @media screen and (max-width:590px) {#header {padding:35px 0 120px}}/*/mediaquery*/
 @media screen and (max-width:440px) {a#logo img {max-width: 100%; height: auto;}}/*/mediaquery*/
 
@@ -190,15 +213,16 @@ img#flagright {height: 100%; width: 16%; float:left;}
 /*-------MAIN NAVIGATION STUFF--------*/
 #navigation {float:left; display: block; clear:both; position: relative; z-index: 101; left: 0; top: 0%; width:100%;}
 #dropmenu {list-style:none; position:relative; width:100%; z-index: 400; text-align: right;}
-#dropmenu li {list-style:none;  position:relative; display: inline; float: left; line-height: 35px;}
+#dropmenu li {list-style:none; width:150px; position:relative; display: inline; float: left; line-height: 35px;}
 #dropmenu li a { 
+	text-align: center;
 	display: block; 
 	line-height: 35px; 
 	color: white; 
 	font-size: 13px; 
-	padding: 0 15px; 
+	padding: 0 10px; 
 	text-transform: uppercase; 
-	margin-right: 2px; 
+	margin-right:2px;
 	letter-spacing: .7px; 
 	font-weight: bold;
 	background: purple;
@@ -240,7 +264,7 @@ img#flagright {height: 100%; width: 16%; float:left;}
 /*--SLIDER STUFF---*/
 #slider {
 	clear:both;
-	padding-top: 70px;
+	padding-top: 0px;
 	margin-bottom: 70px; 
 	width: 100%; 
 	height: 350px;
@@ -384,14 +408,14 @@ html[xmlns] .slides {display: block;}
 li.box {display: block; float: left; height: 150px; width: 150px; position: relative; overflow: hidden; text-align: center; border-bottom: 3px solid #000; font-weight: bold;}
 li.box a {display: block; height: 96px; width: 116px; padding: 27px 17px; color: #000;}
 li.box .theDay {font-size:45px; line-height: 50px; }
-li.box .theTitle {font-size: 11px; line-height: 14px; font-family: sans-serif; letter-spacing: .5px;
+li.box .theTitle {font-size: 11px; line-height: 14px; font-family: Lekton, sans-serif; letter-spacing: .5px;
 
-	font-family: serif;
+	font-family: Lekton, sans-serif;
 	font-style: italic;
 }
 li.box .theTitle span {text-transform: uppercase;  display: inline-block; padding: 2px 8px 0; margin-bottom: 8px; background: #000; color: #f8f8f8; font-size: 9px;
 	
-	font-family: sans-serif;
+	font-family: Lekton, sans-serif;
 	font-style: normal;
 	
 	-moz-border-radius: 15px;
@@ -419,7 +443,7 @@ ul#detailsTabs > li.smallWindow {display: none;}
 
 iframe {width: 100%;}
 
-#crumbs {font-size: 10px; line-height: 20px; font-family: sans-serif;}
+#crumbs {font-size: 10px; line-height: 20px; font-family: Lekton, sans-serif;}
 #listing #crumbs,
 .entry #crumbs {margin: 0 0 35px;}
 
@@ -436,7 +460,7 @@ iframe {width: 100%;}
 
 .socialButton {float: left; margin: 0 15px 25px 0 ;}
 
-#postDetails {width: 300px; font-size: 12px; font-family: sans-serif;}
+#postDetails {width: 300px; font-size: 12px; font-family: Lekton, sans-serif;}
 
 ul#detailsTabs {
 	list-style: none;
@@ -538,17 +562,17 @@ body.page-template-full-width-php #content .page {width: 100%; float: none; bord
 	border-bottom: none;
 	margin-bottom: 10px;	
 }
-.entry {font-family: sans-serif;}
+.entry {font-family: Lekton, sans-serif;}
 
 h2.posttitle {
-	font-family: serif;
+	font-family: Lekton, serif;
 	font-style: italic;
 	font-size: 22px;
 	margin-bottom: 0;
 	margin-top: 20px;
 }
 h2#postTitle {
-	font-family: serif;
+	font-family: Lekton, serif;
 	font-style: italic;
 	font-size: 24px;
 	margin-bottom: 0;
@@ -660,7 +684,7 @@ a.thumbLink img {display: block; padding-bottom: 0px; margin-bottom: 0;
 a.thumbLink:hover img {opacity: .85} 
 
 /*-------BLOG PAGE NAVIGATION STUFF----------*/
-#postNav {font-size:10px; font-family: sans-serif; overflow: hidden; width: 70px; float: right;
+#postNav {font-size:10px; font-family: Lekton, sans-serif; overflow: hidden; width: 70px; float: right;
 
 	display: none;
 }
@@ -671,14 +695,14 @@ a.thumbLink:hover img {opacity: .85}
 
 /*-----SIDEBAR STUFF----*/
 #sidebar ul {margin-left: 0 !important;  position: relative;}
-#sidebar ul li.widget {list-style: none; margin: 0 0 55px; font-size: 12px; font-family: sans-serif; position: relative;}
+#sidebar ul li.widget {list-style: none; margin: 0 0 55px; font-size: 12px; font-family: Lekton, sans-serif; position: relative;}
 #sidebar ul li.widget h3.widgettitle {
 	color: #000; 
 	line-height: 35px; 
 	margin-bottom: 15px;
 	padding: 0;
 	background: none;
-	font-family: serif;
+	font-family: Lekton, serif;
 	font-size: 16px; 
 	font-style: italic;
 	font-weight: bold;

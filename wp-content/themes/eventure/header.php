@@ -120,10 +120,14 @@ if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
 <body <?php body_class();?>>
 
+<div id = "content">
+
 <div id="wrapper">
 
 <!--DOTTED ACCENT-->
+<!--
 <div class="dotted"></div>
+-->
 
 <div id="header">
 	<!--MENU-->
@@ -146,18 +150,37 @@ if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
     <div id="titlebar">
 		<!--DC FLAG-->
-		<img id="flagleft" src="assets/DC_flag_black.png" alt="dc flag">
+		<!--remove  
+		<img id="flagleft" src="https://s3.amazonaws.com/Homestage/images/dc_black_flag.jpg" alt="dc flag">
+		-->
 
 		<!--LOGO-->
+		<!--remove  
 		<?php if($logo){?>	<a id="logo" href="<?php echo home_url(); ?>"><img src="<?php echo $logo;?>" alt="<?php bloginfo('name'); ?>" /></a><?php } ?>
-	
+		-->
+
+		<a id="logo" href="<?php echo home_url(); ?>"><img src ="https://s3.amazonaws.com/Homestage/2013/12/Homestage_solo_med_neg.png" alt="Homestage Concerts in your house" /></a>
+		
+		<img src="https://s3.amazonaws.com/Homestage/2013/12/homestage_title.png" id="titleimg" alt="homestage: DC DIY houseshows and events" />
+
+		<h1 id="hstitle">Homestage DC</h1>	
+		
+
 		<!--TAGLINE--> 
+		<!--remove
 		<?php if($welcomeMsg){ ?> <div id="tagLine"><?php echo $welcomeMsg;?></div> <?php } ?> 
+		-->
+
+		<a id="logo" href="<?php echo home_url(); ?>"><img src ="https://s3.amazonaws.com/Homestage/2013/12/Homestage_solo_med_neg.png" alt="Homestage Concerts in your house" /></a>
+
+
 
 		<!--DC FLAG-->
-		<img id="flagright" src="assets/DC_flag_black.png" alt="dc flag">
+		<!--remove
+		<img id="flagright" src="https://s3.amazonaws.com/Homestage/images/dc_black_flag.jpg" alt="dc flag">
+		-->
 
-	</div>
+	</div><!--end titlebar-->
 
 </div><!--end header-->
 

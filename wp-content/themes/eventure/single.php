@@ -152,5 +152,14 @@ if(in_category($eventCat)){ echo '<div itemscope itemtype="http://data-vocabular
 if(in_category($eventCat)){ echo '</div><!--end event-->'; }
  
 endwhile; endif;
+
+?>
+
+
+<?php
+
 get_footer(); 
+
+
+
 ?>
