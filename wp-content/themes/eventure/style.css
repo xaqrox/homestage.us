@@ -283,7 +283,7 @@ img#flagright {height: 100%; width: 16%; float:left;}
 }
 .sliderInfo a:hover {cursor: pointer; color: #000;}
 
-.sliderTitle {padding: 15px 30px; font-size: 20px; float:left;}
+.sliderTitle {padding: 10px 30px; font-size: 15px; float:left; line-height: 25px; text-transform:uppercase;}
 .sliderDate {background: #000; color: #f8f8f8; width: 145px; text-align: center; line-height: 35px; font-size: 12px; display: inline-block; float: left;
 	background: #000;
 	background: rgba(0,0,0,.85);
@@ -312,7 +312,7 @@ html[xmlns] .slides {display: block;}
 
 .no-js .slides > li:first-child {display: block;}
 
-.flex-direction-nav {position: absolute; width: 70px; height: 35px; top: 195px; left: 145px; z-index: 1000;}
+.flex-direction-nav {position: absolute; width: 70px; height: 35px; top: 0px; left: 0px; z-index: 1000;}
 .flex-direction-nav li a {height: 35px; width: 35px; float: left; text-align: center; line-height: 35px; background: #000; color: #f8f8f8;
 	background: rgba(0,0,0,.85);
 }
@@ -324,21 +324,21 @@ html[xmlns] .slides {display: block;}
 @media screen and (max-width:1040px) {
 	#slider {height: 292px; margin-bottom: 55px;}
 	#slider img {height: 100%}
-	.sliderInfo {top:110px;}
-	.sliderTitle {font-size: 18px;}
-	.flex-direction-nav {top:167px;}
+	.sliderInfo {bottom:0px; position:absolute;}
+	.sliderTitle {font-size: 13px;}
+	.flex-direction-nav {top:0px;float:left;}
 }/*/mediaquery*/
 @media screen and (max-width:890px) {
 	#slider {height: 233px;}
-	.sliderInfo {top:85px;}
-	.sliderTitle {font-size: 16px;}
-	.flex-direction-nav {top:139px;}
+	.sliderInfo {position:absolute; bottom:0px;}
+	.sliderTitle {font-size: 10px;}
+	.flex-direction-nav {top:0px;}
 }/*/mediaquery*/
 @media screen and (max-width:740px) {
 	#slider {height: 175px;}
-	.sliderInfo {top:55px;}
-	.sliderTitle {font-size: 12px;}
-	.flex-direction-nav {top:103px;}
+	.sliderInfo {position:absolute;bottom:0px;}
+	.sliderTitle {font-size: 10px;}
+	.flex-direction-nav {top:0px;}
 }/*/mediaquery*/
 @media screen and (max-width:590px) {
 	#slider {height: 117px;}

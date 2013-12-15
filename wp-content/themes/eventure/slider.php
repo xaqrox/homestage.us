@@ -12,7 +12,7 @@ $sliderNumber = get_theme_mod('themolitor_customizer_slider_number');
 		<?php while ($showPostsInCategory->have_posts()) : $showPostsInCategory->the_post(); ?>
 		<li>
 			<div class="sliderInfo">
-				<div class="sliderDate"><?php echo get_the_time('m.d.Y'); ?></div>
+				<div class="sliderDate"><?php echo get_the_time('m.d.Y'); ?></div> <br>
 				<a class="sliderTitle" href="<?php the_permalink();?>"><?php the_title();?></a><br />
 				
 			</div>
