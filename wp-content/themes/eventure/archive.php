@@ -2,7 +2,7 @@
 
 	<div id="listing">
 	<?php 
-	if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs();
+	/// if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs();
 	
 	//VAR SETUP
 	$eventCat = get_option('themolitor_events_category');
@@ -11,7 +11,7 @@
 	if (have_posts()) : while (have_posts()) : the_post(); 
 	?>
 	
-		<div <?php post_class(); ?>>
+		<div id="listdiv" <?php post_class(); ?>>
 		
 		<?php get_template_part("thumbnail"); ?>
 		
@@ -29,7 +29,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-comment"></i>&nbsp;<?php comments_popup_link(__('0 Comments','themolitor'), __('1 Comment','themolitor'), __('% Comments','themolitor')); if(in_category($eventCat,get_the_ID()) && strtotime(get_the_time('Y-m-d')) < strtotime(date('Y-m-d'))){?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-exclamation red"></i>&nbsp;&nbsp;<?php _e('Event Expired','themolitor');?><br /><?php }?>		
 		</div>
 		
-		<?php the_excerpt(); ?>
+		<!--- <?php the_excerpt(); ?> -->
 		</div><!--end listContent-->
 		
         <div class="clear"></div>

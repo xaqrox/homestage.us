@@ -34,14 +34,7 @@ body {
 	background-attachment: fixed;
 }
 
-#callToAction {
-	background-color:#4B97D4;
-	color:#992A37;
-	text-align:center;
-	letter-spacing:0.5px;
-	margin-bottom: 8px;
 
-}
 
 /* -----A TAG STUFF----- */
 a {
@@ -105,7 +98,7 @@ ul {list-style-type: square;}
 	width:900px; 
 	position: relative; 
 	padding: 8px; 
-	background: #f8f8f8;
+	background: #D7DADB;
 	-webkit-box-shadow: 0px 2px 3px rgba(0,0,0,.3);
 	-moz-box-shadow: 0px 2px 3px rgba(0,0,0,.3);
 	box-shadow: 0px 2px 3px rgba(0,0,0,.3);
@@ -138,28 +131,47 @@ body.single #sidebar {width: 280px;}
 }
 
 /*---------HEADER STUFF-----------*/
-#header {position: relative; top-margin: 0px;  margin-bottom: 8px; width:100%; height: 190px; clear:both;}
+#header {position: relative; top-margin: 0px;  margin-bottom: 8px; width:100%; height: 230px; clear:both;}
 a#logo  {float:left; z-index: 100; width: 20%; height: 100%; }
 a#logo img {display: block; height:100%; margin-left: auto; margin-right: auto;}
 #hstitle {float:left; width:60%; text-align: center; font-family: Lekton; font-size: 55px; letter-spacing: 10px; line-height: 140px;color:white;}
 #titleimg {display:none; float:left; width:40%; height:80%%;margin-left:10%; margin-right:10%;}
-#titlebar {background-image:url('https://s3.amazonaws.com/Homestage/2013/12/Wood-Background-Photos1_0.jpg'); float:left; height: 145px; clear:both;margin-top: 8px; width:100%;}
+#titlebar {background-image:url('https://s3.amazonaws.com/Homestage/2013/12/Wood-Background-Photos1_0.jpg'); float:left; height: 145px; clear:both;margin-top: 8px; width:100%; margin-bottom: 8px;}
 img#flagleft {height:100%; width: 16%; float:left;}
 img#flagright {height: 100%; width: 16%; float:left;}
+
+#callTo {list-style:none; width:100%; position:relative; display: inline; float: left; line-height: 35px;}
+#callTo h2{ 
+	font-family:Maven Pro;
+	text-align: center;
+	display: block; 
+	line-height: 35px; 
+	color: #6DBCDB; 
+	font-size: 15px; 
+	padding: 0 10px; 
+	text-transform: uppercase; 
+	margin-right:2px;
+	letter-spacing: .7px; 
+	font-weight: bold;
+	background: #233250;
+}
+#callTo a{color:#FC5C47 ;}
 
 /*---------------------------------*/
 /*------- RESPONSIVE STUFF --------*/
 /*---------------------------------*/
-@media screen and (max-width:1040px) {#header {padding: 50px 0 85px;}
+@media screen and (max-width:1040px) {#header {padding: 0px 0 85px;}
 									#flagleft{visibility:hidden;}
 									#flagright{visibility: hidden;}
 									#tagLine{visibility:hidden;}
 									#titleimg{display:none;}
+									#hstitle{font-size:45px;}}
 									}/*/mediaquery*/
 @media screen and (max-width:890px) {#header {padding: 50px 0;}
 									#flagleft{visibility:hidden;}
 									#flagright{visibility: hidden;}
-									#tagLine{visibility:hidden;}}	/*/mediaquery*/
+									#tagLine{visibility:hidden;}
+									#hstitle{font-size:30px;}}	/*/mediaquery*/
 @media screen and (max-width:590px) {#header {padding:35px 0 120px}}/*/mediaquery*/
 @media screen and (max-width:440px) {a#logo img {max-width: 100%; height: auto;}}/*/mediaquery*/
 
@@ -213,19 +225,20 @@ img#flagright {height: 100%; width: 16%; float:left;}
 /*-------MAIN NAVIGATION STUFF--------*/
 #navigation {float:left; display: block; clear:both; position: relative; z-index: 101; left: 0; top: 0%; width:100%;}
 #dropmenu {list-style:none; position:relative; width:100%; z-index: 400; text-align: right;}
-#dropmenu li {list-style:none; width:150px; position:relative; display: inline; float: left; line-height: 35px;}
+#dropmenu li {list-style:none; width:25%; position:relative; display: inline; float: left; line-height: 35px;}
 #dropmenu li a { 
+	font-family:Maven Pro;
 	text-align: center;
 	display: block; 
 	line-height: 35px; 
-	color: white; 
-	font-size: 13px; 
+	color: #FFFFFF; 
+	font-size: 15px; 
 	padding: 0 10px; 
 	text-transform: uppercase; 
 	margin-right:2px;
 	letter-spacing: .7px; 
 	font-weight: bold;
-	background: purple;
+	background: #233250;
 }
 #dropmenu li a:hover {text-decoration: none; color: #000; } 
 #dropmenu li ul {list-style:none; display:none; position:absolute; width:200px; z-index:300; top:35px; left: 0; text-align: left;}
@@ -252,7 +265,8 @@ img#flagright {height: 100%; width: 16%; float:left;}
 /*---------------------------------*/
 /*------- RESPONSIVE STUFF --------*/
 /*---------------------------------*/
-@media screen and (max-width:1040px) {#navigation {position: relative; margin-top: 30px;}}/*/mediaquery*/
+@media screen and (max-width:1040px) {#navigation {position: relative; top:0px; }
+										#dropmenu li a{ font-size:11px;}}/*/mediaquery*/
 @media screen and (max-width:890px) {
 	#navigation {display: none;}
 	#selectMenu {display: block;}
@@ -265,7 +279,7 @@ img#flagright {height: 100%; width: 16%; float:left;}
 #slider {
 	clear:both;
 	padding-top: 0px;
-	margin-bottom: 70px; 
+	margin-bottom: 16px; 
 	width: 100%; 
 	height: 350px;
 	position: relative;
@@ -387,7 +401,21 @@ html[xmlns] .slides {display: block;}
 @media screen and (max-width:590px) {#tagLine {text-align: left; line-height: 30px;}}/*/mediaquery*/
 
 /* -----CALENDAR POST STUFF----- */
-.blackBar {width: 100%; text-align: center; line-height: 48px; background: #000; height: 48px; font-size: 10px; line-height: 48px; color: #aaa; letter-spacing: .7px;}
+.blackBar {width: 100%; text-align: center; line-height: 35px; background: #233250; height: 35px; font-size: 10px; line-height: 48px; color: #aaa; letter-spacing: .7px;}
+#calendarTitle {
+	font-family:Maven Pro;
+	text-align: center;
+	display: block; 
+	line-height: 35px; 
+	color: #6DBCDB; 
+	font-size: 15px; 
+	padding: 0 10px; 
+	text-transform: uppercase; 
+	letter-spacing: .7px; 
+	font-weight: bold;
+	background: #233250;
+}
+
 #loadMore {margin-top: -3px; border-top:3px solid #000; line-height: 45px; height: 45px;
 	
 	display: none;
@@ -405,17 +433,15 @@ html[xmlns] .slides {display: block;}
 #filterStickyWrapper,
 #filterStickyWrapper #filter {width: 100% !important; left: 0 !important;}
 
-li.box {display: block; float: left; height: 150px; width: 150px; position: relative; overflow: hidden; text-align: center; border-bottom: 3px solid #000; font-weight: bold;}
-li.box a {display: block; height: 96px; width: 116px; padding: 27px 17px; color: #000;}
-li.box .theDay {font-size:45px; line-height: 50px; }
-li.box .theTitle {font-size: 11px; line-height: 14px; font-family: Lekton, sans-serif; letter-spacing: .5px;
-
-	font-family: Lekton, sans-serif;
-	font-style: italic;
-}
-li.box .theTitle span {text-transform: uppercase;  display: inline-block; padding: 2px 8px 0; margin-bottom: 8px; background: #000; color: #f8f8f8; font-size: 9px;
+li.box {display: block; float: left; height: 150px; width: 150px; position: relative; overflow: hidden; text-align: center; border-bottom: 3px solid #000; font-weight: bold;background:#FFFFFF;}
+li.box a {display: block; height: 96px; width: 116px; padding: 27px 17px; color: #233250;}
+li.box .theDay {font-size:45px; line-height: 50px; color:#233250;}
+li.box .theTitle {font-size: 9px; line-height: 12px; font-family: Maven Pro, sans-serif; font-weight:700; letter-spacing: .3px;
 	
-	font-family: Lekton, sans-serif;
+}
+li.box .theTitle span {text-transform: uppercase;  display: inline-block; padding: 2px 5px 0; margin-bottom: 8px; background: #233250; color: #f8f8f8; font-size: 8px;
+	
+	
 	font-style: normal;
 	
 	-moz-border-radius: 15px;
@@ -425,13 +451,16 @@ li.box .theTitle span {text-transform: uppercase;  display: inline-block; paddin
 
 li#theEnd {background: #000; color: #f8f8f8; line-height: 160px;}
 
-li.monthYear {background-color: #000; color: #f8f8f8; text-transform: uppercase; font-size: 24px; line-height: 24px; cursor: default;
+li.monthYear {background-color: #233250; color: #f8f8f8; text-transform: uppercase; font-size: 24px; line-height: 24px; cursor: default;
 
 	background-image: none;	
 }
 li.monthYear a.dateLink {padding: 0; color: #f8f8f8; padding-top: 40px; height: 110px; width: 100%;}
 li.monthYear a.dateLink:hover {color: #000;}
 li.monthYear span {letter-spacing: 2.5px;}
+
+#daytime {color:#FC5C47;}
+#monthbox {color:#FC5C47;}
 
 /* -----POST AND ENTRY STUFF----- */
 body.single .mapEmbed {margin:0 0 45px; width:100%; overflow: hidden; border-bottom: 5px solid #000; height: 300px;}
@@ -442,14 +471,14 @@ body.single .attachment-post {margin:0 0 45px; border-bottom: 5px solid #000; di
 ul#detailsTabs > li.smallWindow {display: none;}
 
 iframe {width: 100%;}
-
+ 
 #crumbs {font-size: 10px; line-height: 20px; font-family: Lekton, sans-serif;}
 #listing #crumbs,
 .entry #crumbs {margin: 0 0 35px;}
 
 .entry img {max-width: 100%; height: auto;}
 
-.listContent {padding-left: 30px; font-style: italic;}
+.listContent {padding-left: 30px; font-style: normal;}
 .listContent .smallMeta {
 	background: #eee;
 	padding: 5px 15px;
@@ -528,6 +557,8 @@ body.single .post {
 	width: 540px; 
 	padding: 0 0 40px 0;
 }
+
+#listdiv {background-color:#FFFFFF;}
 /*---------------------------------*/
 /*------- RESPONSIVE STUFF --------*/
 /*---------------------------------*/
@@ -557,7 +588,7 @@ body.page-template-full-width-php #content .page {width: 100%; float: none; bord
 #listing .post {
 	margin: 0 0 35px;
 	border-bottom: 1px dashed #ccc;
-	padding-bottom: 55px;
+	padding-bottom: 0px;
 	
 	border-bottom: none;
 	margin-bottom: 10px;	
@@ -566,14 +597,12 @@ body.page-template-full-width-php #content .page {width: 100%; float: none; bord
 
 h2.posttitle {
 	font-family: Lekton, serif;
-	font-style: italic;
 	font-size: 22px;
 	margin-bottom: 0;
 	margin-top: 20px;
 }
 h2#postTitle {
 	font-family: Lekton, serif;
-	font-style: italic;
 	font-size: 24px;
 	margin-bottom: 0;
 }
@@ -614,7 +643,7 @@ h2#postTitle {
 	margin: 0px 0 15px;
 	font-size: 11px;
 	font-family: sans-serif;
-	font-style: italic;
+	font-style: normal;
 	letter-spacing: 0;
 }
 
@@ -704,7 +733,7 @@ a.thumbLink:hover img {opacity: .85}
 	background: none;
 	font-family: Lekton, serif;
 	font-size: 16px; 
-	font-style: italic;
+	font-style: normal;
 	font-weight: bold;
 	letter-spacing: 0;
 }
@@ -771,7 +800,7 @@ input[type="submit"]:hover {color: #000;}
 #primaryPostForm p.alignleft {width: 50%;}
 #primaryPostForm #postSubmit {cursor: pointer;}
 #primaryPostForm .error {color: red;}
-#primaryPostForm .formExample {color: #999; font-style: italic;}
+#primaryPostForm .formExample {color: #999; font-style: normal;}
 #primaryPostForm .dateStuff {width: 90px; }
 #primaryPostForm select.dateStuff {width: 110px;}
 #primaryPostForm #postTest {width: 100px;}
@@ -915,6 +944,7 @@ body.page-template-page-calendar-php #wp-calendar #next a {
 	width: 30%;
 	line-height: 35px;
 }
+
 
 /*----TAG CLOUD WIDGET STUFF-------*/
 .widget_tag_cloud a {

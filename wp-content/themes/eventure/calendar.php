@@ -6,14 +6,17 @@ $theEnd = get_theme_mod('themolitor_the_end');
 
 <!--FILTER-->
 <div id="filter" class="blackBar">
+<h2 id="calendarTitle">Upcoming Events<h2>
 <ul>
-	<li><a class="active allEvents" href="#"><?php echo get_cat_name($eventCat); ?></a></li>
-	<?php
+	<li class="calendarFilter"><a class="activeAllEvents" href="#"><?php echo get_cat_name($eventCat); ?></a></li>
+	
+	<!--muting the filter-->
+	<!-- <?php
 	$cats = wp_list_categories('child_of='.$eventCat.'&title_li=&echo=0');
 	if (!strpos($cats,'No categories') ){
 		echo $cats;
 	}
-	?>
+	?> -->
 </ul>
 </div>
 
@@ -36,7 +39,7 @@ if(get_the_time('M') != $prev_month || get_the_time('Y') != $prev_year){
 
 	<li class="box monthYear" id="<?php echo get_the_time('M'); echo get_the_time('y'); ?>">
 		<a class="dateLink" href="<?php echo home_url(); ?>/<?php echo get_the_time('Y/m'); ?>">
-			<span><?php echo get_the_time('M'); ?></span><br />
+			<span id="monthbox"><?php echo get_the_time('M'); ?></span><br />
 			<?php echo get_the_time('Y'); ?>
 		</a>
 	</li>
@@ -47,7 +50,7 @@ if(get_the_time('M') != $prev_month || get_the_time('Y') != $prev_year){
 		<a  href="<?php the_permalink(); ?>">
 			<span class="theDay"><?php echo get_the_time('d'); ?></span><br />
 			<p class="theTitle">
-				<span><?php echo get_the_time('D @ g:i a'); ?></span><br />
+				<span id="daytime"><?php echo get_the_time('D @ g:i a'); ?></span><br />
 				<?php echo the_title(); ?>
 			</p>
 		</a>                    

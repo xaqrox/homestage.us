@@ -182,6 +182,10 @@ if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 
 	</div><!--end titlebar-->
 
+	<div id="callTo">
+		<h2>The Source for DC DIY <a href="#">GET INVOLVED</a></h2>
+	</div>
+
 </div><!--end header-->
 
 <div id="content">
