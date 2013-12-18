@@ -302,7 +302,7 @@ img#flagright {height: 100%; width: 16%; float:left;}
 										}/*/mediaquery*/
 @media screen and (max-width:440px) {
 									#selectMenu {bottom: 70px;}
-									#dropmenu li a{font-size:6px; letter-spacing:0.5px;}
+									#dropmenu li a{font-weight:300; letter-spacing:0px; font-size:9px;}
 										
 										}/*/mediaquery*/
 
