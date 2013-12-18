@@ -22,8 +22,12 @@ $favicon = get_theme_mod('themolitor_customizer_favicon');
 $welcomeMsg = get_theme_mod('themolitor_customizer_welcome');
 ?>
 
-<?php if($favicon) { ?><link rel="icon" href="<?php echo $favicon; ?>" type="image/x-icon" /><?php } ?>
+<!--using static favicon 
+<?php if($favicon) { ?><link rel="icon" href="<?php echo $favicon; ?>" type="image/x-icon" /><?php } ?>  
+-->
+
 <?php if($googleApi) { echo $googleApi; } ?>
+<link rel="shortcut icon" href="https://s3.amazonaws.com/Homestage/images/logo+for+favicon.png" />
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/scripts/prettyPhoto.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/font-awesome/css/font-awesome.min.css">
