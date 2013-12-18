@@ -10,6 +10,12 @@ Version: 1.4.1
 Tags: light
 */
 
+@font-face {font-family: Bearpaw; src: url('https://s3.amazonaws.com/Homestage/images/BEARPAW_.ttf');}
+@font-face {font-family: Blackout; src: url('https://s3.amazonaws.com/Homestage/fonts/Blackout-2am.ttf');}
+@font-face {font-family: BlackoutAM; src: url('https://s3.amazonaws.com/Homestage/fonts/Blackout-Midnight.ttf');}
+@font-face {font-family: CaptureIt; src: url('https://s3.amazonaws.com/Homestage/fonts/Capture_it.ttf');}
+@font-face {font-family: FingerPaint; src: url('https://s3.amazonaws.com/Homestage/fonts/FingerPaint-Regular.ttf');}
+
 /*--UNUSED--*/
 .aligncenter,
 .bypostauthor,
@@ -114,7 +120,7 @@ ul {list-style-type: square;}
 @media screen and (max-width:890px) {#wrapper{width: 600px;}}/*/mediaquery*/
 @media screen and (max-width:740px) {#wrapper{width: 450px;	padding-bottom: 185px;}}/*/mediaquery*/
 @media screen and (max-width:590px) {#wrapper {width: 300px; padding-bottom: 250px;	margin: 30px auto;}}/*/mediaquery*/
-@media screen and (max-width:440px) {#wrapper  {overflow: hidden; width: 240px;	padding: 0 30px 270px; margin: 10px auto;}}/*/mediaquery*/
+@media screen and (max-width:440px) {#wrapper  {overflow: hidden; width: 240px;	padding: 8px 8px 100px 8px; margin: 10px auto;}}/*/mediaquery*/
 
 #content {width: 100%; clear:both;}
 
@@ -134,7 +140,9 @@ body.single #sidebar {width: 280px;}
 #header {position: relative; top-margin: 0px;  margin-bottom: 8px; width:100%; height: 230px; clear:both;}
 a#logo  {float:left; z-index: 100; width: 20%; height: 100%; }
 a#logo img {display: block; height:100%; margin-left: auto; margin-right: auto;}
-#hstitle {float:left; width:60%; text-align: center; font-family: Lekton; font-size: 55px; letter-spacing: 10px; line-height: 140px;color:white;}
+a#logoRight  {float:left; z-index: 100; width: 20%; height: 100%; }
+a#logoRight img {display: block; height:100%; margin-left: auto; margin-right: auto;}
+#hstitle {float:left; width:60%; text-align: center; font-family: BlackoutAM; font-size: 45px; letter-spacing: 10px; line-height: 140px;color:white;}
 #titleimg {display:none; float:left; width:40%; height:80%%;margin-left:10%; margin-right:10%;}
 #titlebar {background-image:url('https://s3.amazonaws.com/Homestage/2013/12/Wood-Background-Photos1_0.jpg'); float:left; height: 145px; clear:both;margin-top: 8px; width:100%; margin-bottom: 8px;}
 img#flagleft {height:100%; width: 16%; float:left;}
@@ -148,7 +156,7 @@ img#flagright {height: 100%; width: 16%; float:left;}
 	line-height: 35px; 
 	color: #6DBCDB; 
 	font-size: 15px; 
-	padding: 0 10px; 
+	padding: 0 8px; 
 	text-transform: uppercase; 
 	margin-right:2px;
 	letter-spacing: .7px; 
@@ -160,19 +168,33 @@ img#flagright {height: 100%; width: 16%; float:left;}
 /*---------------------------------*/
 /*------- RESPONSIVE STUFF --------*/
 /*---------------------------------*/
-@media screen and (max-width:1040px) {#header {padding: 0px 0 85px;}
+@media screen and (max-width:1040px) {#header {padding: 0px 0 0px;}
 									#flagleft{visibility:hidden;}
 									#flagright{visibility: hidden;}
 									#tagLine{visibility:hidden;}
 									#titleimg{display:none;}
-									#hstitle{font-size:45px;}}
-									}/*/mediaquery*/
-@media screen and (max-width:890px) {#header {padding: 50px 0;}
+									#hstitle{font-size:35px;}}
+									/*/mediaquery*/
+@media screen and (max-width:890px)  {
+									#header {height:188px; padding: 0px;}
+									#titlebar {padding:0pz; margin-top:8px;}
 									#flagleft{visibility:hidden;}
 									#flagright{visibility: hidden;}
 									#tagLine{visibility:hidden;}
-									#hstitle{font-size:30px;}}	/*/mediaquery*/
-@media screen and (max-width:590px) {#header {padding:35px 0 120px}}/*/mediaquery*/
+									#hstitle{font-size:35px; letter-spacing:2px;}
+									}	/*/mediaquery*/
+@media screen and (max-width:740px) {
+									a#logoright {display:none; }
+									a#logo {width:25%;height:90%;}
+									#hstitle {width: 70%; float:left;}
+									#callTo{margin-bottom:8px;}} 
+@media screen and (max-width:590px) {
+									#titlebar {line-height: 300px;}
+									#logo {width: 65px; height: 100%; float:left; line-height: 350px;}
+									a#logo img {width: 65px; height: 65px; position:relative; top:40px;}
+									#hstitle {font-size:25px; letter-spacing: 1px;}
+									#thetag {display:none;}
+									}/*/mediaquery*/
 @media screen and (max-width:440px) {a#logo img {max-width: 100%; height: auto;}}/*/mediaquery*/
 
 /*--------FOOTER STUFF--------*/
@@ -265,15 +287,24 @@ img#flagright {height: 100%; width: 16%; float:left;}
 /*---------------------------------*/
 /*------- RESPONSIVE STUFF --------*/
 /*---------------------------------*/
-@media screen and (max-width:1040px) {#navigation {position: relative; top:0px; }
+@media screen and (max-width:1040px) {#navigation {position: relative;}
 										#dropmenu li a{ font-size:11px;}}/*/mediaquery*/
 @media screen and (max-width:890px) {
-	#navigation {display: none;}
-	#selectMenu {display: block;}
-}/*/mediaquery*/
+									/*#navigation {display: none;}*/
+									#selectMenu {display: none;}
+									#dropmenu li {width:50%; padding:0px 0px 2px 0px;}
+									}
+										/*/mediaquery*/
 @media screen and (max-width:740px) {#selectMenu {width: 120px;}}/*/mediaquery*/
-@media screen and (max-width:590px) {#selectMenu {width: 100%; top:inherit; bottom: 60px;}}/*/mediaquery*/
-@media screen and (max-width:440px) {#selectMenu {bottom: 70px;}}/*/mediaquery*/
+@media screen and (max-width:590px) {
+									#selectMenu {width: 100%; top:inherit; bottom: 60px;}
+									#dropmenu li a {font-size: 8px; letter-spacing: 1px;}
+										}/*/mediaquery*/
+@media screen and (max-width:440px) {
+									#selectMenu {bottom: 70px;}
+									#dropmenu li a{font-size:6px; letter-spacing:0.5px;}
+										
+										}/*/mediaquery*/
 
 /*--SLIDER STUFF---*/
 #slider {
@@ -336,7 +367,7 @@ html[xmlns] .slides {display: block;}
 /*------- RESPONSIVE STUFF --------*/
 /*---------------------------------*/
 @media screen and (max-width:1040px) {
-	#slider {height: 292px; margin-bottom: 55px;}
+	#slider {height: 292px;}
 	#slider img {height: 100%}
 	.sliderInfo {bottom:0px; position:absolute;}
 	.sliderTitle {font-size: 13px;}
@@ -351,19 +382,18 @@ html[xmlns] .slides {display: block;}
 @media screen and (max-width:740px) {
 	#slider {height: 175px;}
 	.sliderInfo {position:absolute;bottom:0px;}
-	.sliderTitle {font-size: 10px;}
+	.sliderTitle {font-size: 10px;overflow:hidden;}
 	.flex-direction-nav {top:0px;}
 }/*/mediaquery*/
 @media screen and (max-width:590px) {
 	#slider {height: 117px;}
-	.sliderTitle {padding: 5px 10px;}
+	.sliderTitle {padding: 5px 10px;font-size:8px;overflow:hidden;height:15px; line-height:8px;}
+	.sliderInfo {overflow:hidden; font-size:8px;}
 	.sliderDate {display: none;}
-	.sliderInfo {top:inherit; bottom: 117px;}
 	.flex-direction-nav {display: none;}
 }/*/mediaquery*/
 @media screen and (max-width:440px) {
 	#slider {height: 93px;}
-	.sliderInfo {top:inherit; bottom:93px; font-size: 10px;}
 	.flex-direction-nav {display: none;}
 }/*/mediaquery*/
 

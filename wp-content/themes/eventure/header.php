@@ -175,7 +175,7 @@ if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 		<?php if($welcomeMsg){ ?> <div id="tagLine"><?php echo $welcomeMsg;?></div> <?php } ?> 
 		-->
 
-		<a id="logo" href="<?php echo home_url(); ?>"><img src ="https://s3.amazonaws.com/Homestage/2013/12/Homestage_solo_med_neg.png" alt="Homestage Concerts in your house" /></a>
+		<a id="logoright" href="<?php echo home_url(); ?>"><img src ="https://s3.amazonaws.com/Homestage/2013/12/Homestage_solo_med_neg.png" alt="Homestage Concerts in your house" /></a>
 
 
 
@@ -187,7 +187,7 @@ if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 	</div><!--end titlebar-->
 
 	<div id="callTo">
-		<h2>The Source for DC DIY <a href="#">GET INVOLVED</a></h2>
+		<h2 id="tagtext"><span id="thetag">The Source for DC DIY </span><a href="#">GET INVOLVED</a></h2>
 	</div>
 
 </div><!--end header-->
