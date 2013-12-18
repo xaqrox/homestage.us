@@ -45,7 +45,7 @@ a {
 }
 a:hover {text-decoration:none; color: #000;}
 
-p {font-size: 12px; font-family: Lekton,sans-serif}
+p {font-size: 12px; font-family: Maven Pro,sans-serif}
 
 img {max-width: 100%;}
 
@@ -435,11 +435,11 @@ html[xmlns] .slides {display: block;}
 
 li.box {display: block; float: left; height: 150px; width: 150px; position: relative; overflow: hidden; text-align: center; border-bottom: 3px solid #000; font-weight: bold;background:#FFFFFF;}
 li.box a {display: block; height: 96px; width: 116px; padding: 27px 17px; color: #233250;}
-li.box .theDay {font-size:45px; line-height: 50px; color:#233250;}
-li.box .theTitle {font-size: 9px; line-height: 12px; font-family: Maven Pro, sans-serif; font-weight:700; letter-spacing: .3px;
+li.box .theDay {font-size:40px; line-height: 30px; color:#233250;}
+li.box .theTitle {font-size: 11px; line-height: 12px; font-family: Maven Pro, sans-serif; font-weight:700; letter-spacing: .05px;
 	
 }
-li.box .theTitle span {text-transform: uppercase;  display: inline-block; padding: 2px 5px 0; margin-bottom: 8px; background: #233250; color: #f8f8f8; font-size: 8px;
+li.box .theTitle span {text-transform: uppercase;  display: inline-block; padding: 2px 5px 0; margin-bottom: 8px; background: #233250; color: #f8f8f8; font-size: 8px; 
 	
 	
 	font-style: normal;
@@ -470,6 +470,8 @@ body.single .attachment-post {margin:0 0 45px; border-bottom: 5px solid #000; di
 
 ul#detailsTabs > li.smallWindow {display: none;}
 
+#entrycontent {font-family:Maven Pro;}
+#entry p {font-family:Maven Pro, sans-serif;}
 iframe {width: 100%;}
  
 #crumbs {font-size: 10px; line-height: 20px; font-family: Lekton, sans-serif;}
@@ -531,6 +533,7 @@ ul#metaStuff #crumbs {margin-bottom: 20px;}
 	border: none;
 	color: #888;
 	padding: 0;
+	font-family:Maven Pro;
 	margin-bottom: 20px;
 }
 #cntdwn span {color:#000; font-size: 18px;}
@@ -593,16 +596,16 @@ body.page-template-full-width-php #content .page {width: 100%; float: none; bord
 	border-bottom: none;
 	margin-bottom: 10px;	
 }
-.entry {font-family: Lekton, sans-serif;}
+.entry {font-family: Maven Pro, sans-serif;}
 
 h2.posttitle {
-	font-family: Lekton, serif;
+	font-family: Maven Pro, serif;
 	font-size: 22px;
 	margin-bottom: 0;
 	margin-top: 20px;
 }
 h2#postTitle {
-	font-family: Lekton, serif;
+	font-family: Maven Pro, serif;
 	font-size: 24px;
 	margin-bottom: 0;
 }

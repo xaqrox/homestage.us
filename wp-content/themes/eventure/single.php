@@ -104,7 +104,7 @@ if(in_category($eventCat)){ echo '<div itemscope itemtype="http://data-vocabular
 		</ul>
 	</div>
 
-	<div <?php post_class(); ?>>
+	<div id="entrycontent" <?php post_class(); ?>>
 		
 		<div class="entry">
 		
