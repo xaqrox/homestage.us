@@ -140,8 +140,8 @@ body.single #sidebar {width: 280px;}
 #header {position: relative; top-margin: 0px;  margin-bottom: 8px; width:100%; height: 230px; clear:both;}
 a#logo  {float:left; z-index: 100; width: 20%; height: 100%; }
 a#logo img {display: block; height:100%; margin-left: auto; margin-right: auto;}
-a#logoRight  {float:left; z-index: 100; width: 20%; height: 100%; }
-a#logoRight img {display: block; height:100%; margin-left: auto; margin-right: auto;}
+a#logoright  {float:left; z-index: 100; width: 20%; height: 100%; }
+a#logoright img {display: block; height:100%; margin-left: auto; margin-right: auto;}
 #hstitle {float:left; width:60%; text-align: center; font-family: BlackoutAM; font-size: 45px; letter-spacing: 10px; line-height: 140px;color:white;}
 #titleimg {display:none; float:left; width:40%; height:80%%;margin-left:10%; margin-right:10%;}
 #titlebar {background-image:url('https://s3.amazonaws.com/Homestage/2013/12/Wood-Background-Photos1_0.jpg'); float:left; height: 145px; clear:both;margin-top: 8px; width:100%; margin-bottom: 8px;}
