@@ -371,7 +371,7 @@ html[xmlns] .slides {display: block;}
 /*---------------------------------*/
 @media screen and (max-width:1040px) {
 	#slider {height: 292px;}
-	#slider img {height: 100%}
+	#slider img {height: auto}
 	.sliderInfo {bottom:0px; position:absolute;}
 	.sliderTitle {font-size: 13px;}
 	.flex-direction-nav {top:0px;float:left;}
@@ -393,7 +393,7 @@ html[xmlns] .slides {display: block;}
 	.sliderTitle {padding: 5px 10px;font-size:8px;overflow:hidden;height:15px; line-height:8px;}
 	.sliderInfo {overflow:hidden; font-size:8px;}
 	.sliderDate {display: none;}
-	#slider img {max-height:100%;}
+	#slider img {height:auto;}
 	.flex-direction-nav {display: none;}
 	.flex-control-nav {display:none;}
 }/*/mediaquery*/
