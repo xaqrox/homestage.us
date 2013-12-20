@@ -6,8 +6,8 @@
 	
 	//VAR SETUP
 	$eventCat = get_option('themolitor_events_category');
-
-	if($eventCat && !is_search() && in_category($eventCat)){query_posts($query_string . '&orderby=date&order=DESC');}
+	$args = 'cat=' . $eventCat . "&orderby=date&order=ASC";
+	if($eventCat && !is_search() && in_category($eventCat)){query_posts( $args );}
 	if (have_posts()) : while (have_posts()) : the_post(); 
 	?>
 	
