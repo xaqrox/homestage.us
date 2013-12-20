@@ -729,9 +729,9 @@ h2#postTitle {
 @media screen and (max-width:590px) {
 	.dateInfo {padding: 15px 0; width: 100%;}
 	.dayInfo {font-size: 35px; line-height: 25px;}
-	#filterStickyWrapper {height:150px;}
-	.blackBar {height:150px;}
-	h2#calendarTitle {height:100%; line-height: 150px; background-color:#6DBCDB; color:white; }
+	#filterStickyWrapper {height:75px;}
+	.blackBar {height:75px;}
+	h2#calendarTitle {height:100%; line-height: 75px; background-color:#6DBCDB; color:white; }
 	.listContent {padding: 1px 0 0; clear: both;}
 	.listContent .smallMeta {background: none; padding: 0;}	
 }/*/mediaquery*/
