@@ -120,6 +120,19 @@ if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
 <![endif]-->
 
+<!--Google Analytics Async Universal-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46639824-1', 'homestage.us');
+  ga('send', 'pageview');
+
+</script>
+<!--end GA snippet-->
+
 </head>
 
 <body <?php body_class();?>>
@@ -187,7 +200,7 @@ if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 	</div><!--end titlebar-->
 
 	<div id="callTo">
-		<h2 id="tagtext"><span id="thetag">The Source for DC DIY </span><a href="#">GET INVOLVED</a></h2>
+		<h2 id="tagtext"><span id="thetag">The Source for DC DIY </span><a href="https://docs.google.com/forms/d/119qD3yZOrrcJ_EA1eqIBx9AUe-2Gbyxz8h4rOu-d3j0/viewform" target="_blank">GET INVOLVED</a></h2>
 	</div>
 
 </div><!--end header-->

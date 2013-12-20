@@ -62,7 +62,7 @@ if ( isset( $_POST['submitted'] ) && isset( $_POST['post_nonce_field'] ) && wp_v
     $post_id = wp_insert_post($post_information);
 
 	if($post_id) {
-		$confirmation = '"'.$postTitle.'" '.__('has successfully been subitted for review.','themolitor');
+		$confirmation = '"'.$postTitle.'" '.__('has been successfully subitted. We will take a look at post it for you asap.  Thanks!','themolitor');
 	
     	//UPDATE CUSTOM META
     	if(isset($postAddress)){update_post_meta($post_id, 'themolitor_address', esc_attr(strip_tags($postAddress)));}
@@ -227,6 +227,7 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
  			
  			<p><!--CONTENT-->
        		<label for="postContent"><?php _e('Details', 'themolitor') ?><span class="red">*</span></label><?php if ($postContentError != '') { ?> <span class="error"><?php echo $postContentError; ?></span><?php } ?><br />
+       		If you have youtube or soundcloud assets to share, copy the link into this box on its own line and it will display when published.
  			<textarea name="postContent" id="postContent" rows="8" cols="30" class="required"><?php if(isset( $_POST['postContent']) && $_SERVER['REQUEST_METHOD'] != "POST"){ if(function_exists('stripslashes')){ echo stripslashes($_POST['postContent']); } else { echo $_POST['postContent'];} } ?></textarea>
  			</p>
  			 			 			

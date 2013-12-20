@@ -15,11 +15,12 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="clear"></div>
         </div><!--end entry-->
         
-                    
+                  
         <div id="commentsection">
 			<?php comments_template(); ?>
         </div>
-	
+		
+
 	<div class="clear"></div>
 	</div><!--end post--> 
 	

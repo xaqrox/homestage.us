@@ -51,7 +51,7 @@ a {
 }
 a:hover {text-decoration:none; color: #000;}
 
-p {font-size: 12px; font-family: Maven Pro,sans-serif}
+p {font-size: 15px; font-family: Maven Pro,sans-serif}
 
 img {max-width: 100%;}
 
@@ -195,7 +195,10 @@ img#flagright {height: 100%; width: 16%; float:left;}
 									#hstitle {font-size:25px; letter-spacing: 1px;}
 									#thetag {display:none;}
 									}/*/mediaquery*/
-@media screen and (max-width:440px) {a#logo img {max-width: 100%; height: auto;}}/*/mediaquery*/
+@media screen and (max-width:440px) {
+									a#logo img {max-width: 100%; height: auto;}
+									#hstitle {letter-spacing: 0px;font-size:20px;}
+									}/*/mediaquery*/
 
 /*--------FOOTER STUFF--------*/
 #copyright {
@@ -501,7 +504,7 @@ body.single .attachment-post {margin:0 0 45px; border-bottom: 5px solid #000; di
 ul#detailsTabs > li.smallWindow {display: none;}
 
 #entrycontent {font-family:Maven Pro;}
-#entry p {font-family:Maven Pro, sans-serif;}
+#entry p {font-family:Maven Pro, sans-serif; font-size:15px;}
 iframe {width: 100%;}
  
 #crumbs {font-size: 10px; line-height: 20px; font-family: Lekton, sans-serif;}
@@ -521,7 +524,7 @@ iframe {width: 100%;}
 
 .socialButton {float: left; margin: 0 15px 25px 0 ;}
 
-#postDetails {width: 300px; font-size: 12px; font-family: Lekton, sans-serif;}
+#postDetails {width: 300px; font-size: 15px; font-family: Maven Pro, sans-serif;}
 
 ul#detailsTabs {
 	list-style: none;
@@ -537,7 +540,7 @@ ul#detailsTabs > li {
 	padding: 0 20px;
 	margin: 0 1px -1px 0;
 	cursor: pointer;
-	font-size: 10px;	
+	font-size: 12px;	
 }
 ul#detailsTabs > li.activeTab {border-bottom-color:#f8f8f8; background: transparent; color: #000;}
 ul#detailsTabs > li.activeTab:hover{background: #f8f8f8;}
@@ -674,13 +677,13 @@ h2#postTitle {
 
 .smallMeta {
 	margin: 0px 0 15px;
-	font-size: 11px;
+	font-size: 13px;
 	font-family: sans-serif;
 	font-style: normal;
 	letter-spacing: 0;
 }
 
-.entry{font-size: 12px;}
+.entry{font-size: 15px;}
 .entry ol,.entry ul {margin:0 0 15px 25px; padding: 0; font-size: 12px;}
 .entry li {padding:0 0 0 5px; list-style-position:outside; line-height: 1.5em;}
 .entry p {margin: 0 0 15px;}
@@ -746,7 +749,7 @@ a.thumbLink img {display: block; padding-bottom: 0px; margin-bottom: 0;
 a.thumbLink:hover img {opacity: .85} 
 
 /*-------BLOG PAGE NAVIGATION STUFF----------*/
-#postNav {font-size:10px; font-family: Lekton, sans-serif; overflow: hidden; width: 70px; float: right;
+#postNav {font-size:10px; font-family: Maven Pro, sans-serif; overflow: hidden; width: 70px; float: right;
 
 	display: none;
 }
@@ -757,14 +760,14 @@ a.thumbLink:hover img {opacity: .85}
 
 /*-----SIDEBAR STUFF----*/
 #sidebar ul {margin-left: 0 !important;  position: relative;}
-#sidebar ul li.widget {list-style: none; margin: 0 0 55px; font-size: 12px; font-family: Lekton, sans-serif; position: relative;}
+#sidebar ul li.widget {list-style: none; margin: 0 0 55px; font-size: 12px; font-family: Maven Pro, sans-serif; position: relative;}
 #sidebar ul li.widget h3.widgettitle {
 	color: #000; 
 	line-height: 35px; 
 	margin-bottom: 15px;
 	padding: 0;
 	background: none;
-	font-family: Lekton, serif;
+	font-family: Maven Pro, sans-serif;
 	font-size: 16px; 
 	font-style: normal;
 	font-weight: bold;
