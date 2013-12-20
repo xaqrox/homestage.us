@@ -119,8 +119,8 @@ ul {list-style-type: square;}
 @media screen and (max-width:1040px) {#wrapper{overflow: hidden; width: 750px;}}/*/mediaquery*/
 @media screen and (max-width:890px) {#wrapper{width: 600px;}}/*/mediaquery*/
 @media screen and (max-width:740px) {#wrapper{width: 450px;	padding-bottom: 185px;}}/*/mediaquery*/
-@media screen and (max-width:590px) {#wrapper {width: 300px; padding-bottom: 250px;	margin: 30px auto;}}/*/mediaquery*/
-@media screen and (max-width:440px) {#wrapper  {overflow: hidden; width: 240px;	padding: 8px 8px 100px 8px; margin: 10px auto;}}/*/mediaquery*/
+@media screen and (max-width:590px) {#wrapper {width: 94%%; padding-bottom: 250px;	margin: 30px auto;}}/*/mediaquery*/
+@media screen and (max-width:440px) {#wrapper  {overflow: hidden; width: 94%;	padding: 8px 8px 100px 8px; margin: 10px auto;}}/*/mediaquery*/
 
 #content {width: 100%; clear:both;}
 
@@ -176,7 +176,7 @@ img#flagright {height: 100%; width: 16%; float:left;}
 									#hstitle{font-size:35px;}}
 									/*/mediaquery*/
 @media screen and (max-width:890px)  {
-									#header {height:188px; padding: 0px;}
+									#header {height:270px; padding: 0px;}
 									#titlebar {padding:0pz; margin-top:8px;}
 									#flagleft{visibility:hidden;}
 									#flagright{visibility: hidden;}
@@ -192,12 +192,12 @@ img#flagright {height: 100%; width: 16%; float:left;}
 									#titlebar {line-height: 300px;}
 									#logo {width: 65px; height: 100%; float:left; line-height: 350px;}
 									a#logo img {width: 65px; height: 65px; position:relative; top:40px;}
-									#hstitle {font-size:25px; letter-spacing: 1px;}
+									#hstitle {font-size:35px; letter-spacing: 0.5px;float:left;}
 									#thetag {display:none;}
 									}/*/mediaquery*/
 @media screen and (max-width:440px) {
 									a#logo img {max-width: 100%; height: auto;}
-									#hstitle {letter-spacing: 0px;font-size:20px;}
+									#hstitle {letter-spacing: 0px;font-size:25px;}
 									}/*/mediaquery*/
 
 /*--------FOOTER STUFF--------*/
@@ -389,15 +389,17 @@ html[xmlns] .slides {display: block;}
 	.flex-direction-nav {top:0px;}
 }/*/mediaquery*/
 @media screen and (max-width:590px) {
-	#slider {height: 117px;}
+	#slider {height: 100%;}
 	.sliderTitle {padding: 5px 10px;font-size:8px;overflow:hidden;height:15px; line-height:8px;}
 	.sliderInfo {overflow:hidden; font-size:8px;}
 	.sliderDate {display: none;}
 	.flex-direction-nav {display: none;}
+	.flex-control-nav {display:none;}
 }/*/mediaquery*/
 @media screen and (max-width:440px) {
-	#slider {height: 93px;}
+	#slider {height: 100%;}
 	.flex-direction-nav {display: none;}
+	.flex-control-nav {display:none;}
 }/*/mediaquery*/
 
 
@@ -462,6 +464,7 @@ html[xmlns] .slides {display: block;}
 #filter li a:hover,
 #filter li a.active {color: #fff;}
 
+#filter {position:relative;}
 #filter.sticky {z-index: 2000; width: 100%}
 #filterStickyWrapper,
 #filterStickyWrapper #filter {width: 100% !important; left: 0 !important;}
@@ -719,16 +722,15 @@ h2#postTitle {
 @media screen and (max-width:740px) {
 	.listContent h2.posttitle {font-size: 18px; margin-top: 10px;}
 	
-	#filterStickyWrapper,
-	.blackBar {display: none;}
-	
 	ul#dateList {border-top: 3px solid #000;}	
 	.dateInfo {margin: 0 15px 0 0; padding: 28px 10px;}
 }/*/mediaquery*/
 @media screen and (max-width:590px) {
 	.dateInfo {padding: 15px 0; width: 100%;}
 	.dayInfo {font-size: 35px; line-height: 25px;}
-	
+	#filterStickyWrapper {height:150px;}
+	.blackBar {height:150px;}
+	h2#calendarTitle {height:100%; line-height: 150px; background-color:#6DBCDB; color:white; }
 	.listContent {padding: 1px 0 0; clear: both;}
 	.listContent .smallMeta {background: none; padding: 0;}	
 }/*/mediaquery*/

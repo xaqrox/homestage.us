@@ -20,13 +20,13 @@ if($imageInstead && has_post_thumbnail()) {
 //SHOW ADDRESS
 } elseif($address){ ?>
 	<div class="mapEmbed" id="bannerMap">
-		<iframe width="900" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?q=<?php echo $address; ?>&amp;output=embed&amp;iwloc=near&amp;z=14"></iframe>
+		<iframe width="900" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?q=<?php echo $address; ?>&amp;output=embed&amp;iwloc=near&amp;z=14&amp;draggable=false"></iframe>
 	</div><!--end mapEmbed-->
 <?php 
 //LEGACY SUPPORT FOR GOOGLE URL
 } elseif ($data[ 'google_map' ]) { ?>
 	<div class="mapEmbed" id="bannerMap">
-		<iframe width="900" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $data[ 'google_map' ]; ?>&amp;output=embed&amp;iwloc=near"></iframe>
+		<iframe width="900" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="<?php echo $data[ 'google_map' ]; ?>&amp;output=embed&amp;iwloc=near&amp;draggable=false"></iframe>
 	</div><!--end mapEmbed-->
 <?php 
 //SHOW FEATURED IMAGE

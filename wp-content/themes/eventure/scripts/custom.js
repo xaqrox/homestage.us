@@ -54,7 +54,7 @@ this.molitorscripts = function () {
 	jQuery(window).load(function(){
 	
 		//STICKY FILTER
-		jQuery("#filter").sticky({ topSpacing: 0, className: 'sticky' });
+		// jQuery("#filter").sticky({ topSpacing: 0, className: 'sticky' });
 		
 		//SLIDER
 		jQuery('#slider').flexslider({
