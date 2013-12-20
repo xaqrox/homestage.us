@@ -492,7 +492,7 @@ li.monthYear a.dateLink {padding: 0; color: #f8f8f8; padding-top: 40px; height: 
 li.monthYear a.dateLink:hover {color: #000;}
 li.monthYear span {letter-spacing: 2.5px;}
 
-#daytime {color:#FC5C47;}
+#daytime {color:white; background:#FC5C47;}
 #monthbox {color:#FC5C47;}
 
 /* -----POST AND ENTRY STUFF----- */
