@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="initial-scale=1.0,width=device-width" />
+<meta name="description" content="A community resource and listing of DIY Events in the Washington, DC area including music, film, art, and salon. Why Do-It-Yourself when we can Do-It-Together?" />
 <meta property="og:image" content="https://s3.amazonaws.com/Homestage/images/homestage+og+image+large.jpg" />
 <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />

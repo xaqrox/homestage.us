@@ -402,7 +402,21 @@ function wp_mail( $to, $subject, $message, $headers = '', $attachments = array()
 	}
 
 	// Set to use PHP's mail()
-	$phpmailer->IsMail();
+	// $phpmailer->IsMail();
+
+	// Over ride and set to use SMTP. Set enviromental variables.
+  $phpmailer->IsSMTP();
+  $phpmailer->SMTPAuth = true; // enable SMTP authentication
+  $phpmailer->Port = 587; //25; // set the SMTP server port
+
+  $phpmailer->Host = 'smtp.mandrillapp.com'; // SMTP server
+  $phpmailer->Username = $_ENV["ndeprey@alumni.nd.edu"]; // SMTP server username
+  $phpmailer->Password = $_ENV["v-fRa8oCJHFaZzbkFSijeA"]; // SMTP server password
+
+  $phpmailer->From = $bloginfo = get_bloginfo( 'admin_email', 'raw' );
+  $phpmailer->FromName = $bloginfo = get_bloginfo( 'name', 'raw' );
+  $phpmailer->Sender = $bloginfo = get_bloginfo( 'admin_email', 'raw' );
+  //$phpmailer->AddReplyTo($bloginfo = get_bloginfo( 'admin_email', 'raw' );, $bloginfo = get_bloginfo( 'name', 'raw' ););
 
 	// Set Content-Type and charset
 	// If we don't have a content-type from the input headers
