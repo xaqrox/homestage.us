@@ -62,7 +62,7 @@ if ( isset( $_POST['submitted'] ) && isset( $_POST['post_nonce_field'] ) && wp_v
     $post_id = wp_insert_post($post_information);
 
 	if($post_id) {
-		$confirmation = '"'.$postTitle.'" '.__('has been successfully subitted. We will take a look at post it for you asap.  Thanks!','themolitor');
+		$confirmation = '"'.$postTitle.'" '.__('has been successfully subitted. We will take a look and post it for you asap.  Thanks!','themolitor');
 	
     	//UPDATE CUSTOM META
     	if(isset($postAddress)){update_post_meta($post_id, 'themolitor_address', esc_attr(strip_tags($postAddress)));}
