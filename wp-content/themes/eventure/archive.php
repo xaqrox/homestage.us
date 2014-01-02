@@ -24,10 +24,12 @@
 		<div class="listContent">
 		<h2 class="posttitle"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 		
+		<!--- 
 		<div class="smallMeta">
 		<i class="icon-folder-close"></i>&nbsp;&nbsp;<?php the_category(', '); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-user"></i>&nbsp;<?php the_author(); ?>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-comment"></i>&nbsp;<?php comments_popup_link(__('0 Comments','themolitor'), __('1 Comment','themolitor'), __('% Comments','themolitor')); if(in_category($eventCat,get_the_ID()) && strtotime(get_the_time('Y-m-d')) < strtotime(date('Y-m-d'))){?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-exclamation red"></i>&nbsp;&nbsp;<?php _e('Event Expired','themolitor');?><br /><?php }?>		
-		</div>
+		</div> 
+	-->
 		
 		<!--- <?php the_excerpt(); ?> -->
 		</div><!--end listContent-->
