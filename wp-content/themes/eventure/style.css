@@ -515,6 +515,7 @@ iframe {width: 100%;}
 #listing #crumbs,
 .entry #crumbs {margin: 0 0 35px;}
 
+
 .entry img {max-width: 100%; height: auto;}
 
 .listContent {padding-left: 30px; font-style: normal;}
@@ -598,7 +599,7 @@ body.single .post {
 	padding: 0 0 40px 0;
 }
 
-#listdiv {background-color:#FFFFFF;}
+#listdiv {background-color:#FFFFFF; margin-bottom:25px;}
 /*---------------------------------*/
 /*------- RESPONSIVE STUFF --------*/
 /*---------------------------------*/
@@ -631,7 +632,7 @@ body.page-template-full-width-php #content .page {width: 100%; float: none; bord
 	padding-bottom: 0px;
 	
 	border-bottom: none;
-	margin-bottom: 10px;	
+	margin-bottom: 25px;	
 }
 .entry {font-family: Maven Pro, sans-serif;}
 
@@ -732,7 +733,7 @@ h2#postTitle {
 	#filterStickyWrapper {height:75px;}
 	.blackBar {height:75px;}
 	h2#calendarTitle {height:100%; line-height: 75px; background-color:#6DBCDB; color:white; }
-	.listContent {padding: 1px 0 0; clear: both;}
+	.listContent {padding: 1px 5px 0; clear: both;}
 	.listContent .smallMeta {background: none; padding: 0;}	
 }/*/mediaquery*/
 @media screen and (max-width:440px) {
