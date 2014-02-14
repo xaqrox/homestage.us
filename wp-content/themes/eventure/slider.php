@@ -7,7 +7,7 @@ $sliderNumber = get_theme_mod('themolitor_customizer_slider_number');
 <!--SLIDER-->
 <div id="slider">
 	<ul class="slides">
-		<?php $showPostsInCategory = new WP_Query(); $showPostsInCategory->query('cat='.$sliderCat.'&showposts='.$sliderNumber);  ?>
+		<?php $showPostsInCategory = new WP_Query(); $showPostsInCategory->query('cat='.$sliderCat.'&showposts='.$sliderNumber.'&orderby=date&order=ASC');  ?>
 		<?php if ($showPostsInCategory->have_posts()) :?>
 		<?php while ($showPostsInCategory->have_posts()) : $showPostsInCategory->the_post(); ?>
 		<li>
@@ -19,9 +19,7 @@ $sliderNumber = get_theme_mod('themolitor_customizer_slider_number');
 			<a id="sliderphotolink" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
 			<?php the_post_thumbnail('slider'); ?>
 			</a>
-<!---			
-	<?php the_post_thumbnail('slider'); ?>	
--->
+
 		</li>
 		<?php endwhile; endif; ?>
 	</ul>
