@@ -13,13 +13,13 @@ this.molitorscripts = function () {
 			jQuery('li.postEvent').removeClass('hideMe').children().stop(true,true).animate({opacity:"1"},350);
 		} else {
 			var activeCat = jQuery(this).parent('li').removeClass('cat-item').attr('class');
-			jQuery('li.postEvent').not('li.'+ activeCat).addClass('hideMe').children().stop(true,true).animate({opacity:".1"},350);
+			jQuery('li.postEvent').not('li.'+ activeCat).addClass('hideMe').children().stop(true,true).animate({opacity:".15"},350);
 			jQuery('li.'+ activeCat).children().stop(true,true).animate({opacity:"1"},350);
 		}		
 		
 		return false;
 	});
-	jQuery('#filter li').not(':first').prepend("/ &nbsp;&nbsp;&nbsp;");
+	jQuery('#filter li').not(':first').prepend("<span id='slash'>/</span> &nbsp;&nbsp;&nbsp;");
 	
 
 	//MENU

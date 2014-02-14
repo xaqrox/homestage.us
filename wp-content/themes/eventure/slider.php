@@ -16,7 +16,12 @@ $sliderNumber = get_theme_mod('themolitor_customizer_slider_number');
 				<a class="sliderTitle" href="<?php the_permalink();?>"><?php the_title();?></a><br />
 				
 			</div>
-			<?php the_post_thumbnail('slider'); ?>	
+			<a id="sliderphotolink" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+			<?php the_post_thumbnail('slider'); ?>
+			</a>
+<!---			
+	<?php the_post_thumbnail('slider'); ?>	
+-->
 		</li>
 		<?php endwhile; endif; ?>
 	</ul>

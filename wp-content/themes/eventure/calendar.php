@@ -8,15 +8,14 @@ $theEnd = get_theme_mod('themolitor_the_end');
 <div id="filter" class="blackBar">
 <h2 id="calendarTitle">Upcoming Events<h2>
 <ul>
-	<li class="calendarFilter"><a class="activeAllEvents" href="#"><?php echo get_cat_name($eventCat); ?></a></li>
+	<li class="calendarFilter"><a class="allEvents" href="#">All Events</a></li>
 	
-	<!--muting the filter-->
-	<!-- <?php
-	$cats = wp_list_categories('child_of='.$eventCat.'&title_li=&echo=0');
+	<?php
+	$cats = wp_list_categories('child_of='.$eventCat.'&title_li=&echo=0&depth=1&orderby=count&order=DESC');
 	if (!strpos($cats,'No categories') ){
 		echo $cats;
 	}
-	?> -->
+	?> 
 </ul>
 </div>
 

@@ -437,11 +437,31 @@ html[xmlns] .slides {display: block;}
 @media screen and (max-width:590px) {#tagLine {text-align: left; line-height: 30px;}}/*/mediaquery*/
 
 /* -----CALENDAR POST STUFF----- */
-.blackBar {width: 100%; text-align: center; line-height: 35px; background: #233250; height: 35px; font-size: 10px; line-height: 48px; color: #aaa; letter-spacing: .7px;}
+.blackBar {width: 100%; text-align: center; line-height: 35px; background: #233250; height: 50px; font-size: 10px; line-height: 48px; color: #aaa; letter-spacing: .7px;}
+.blackBar li {font-family:Maven Pro;font-size:5px;color: #6DBCDB;} 
+#filter li a {color:#6DBCDB;}
+
+/*-- Calendar Filter responsive stuff ----*/
+@media screen and (max-width:1040px){
+#filter li a {font-size: 12px;}	
+}
+@media screen and (max-width:890px){
+#filter li a {font-size: 10px;}
+}
+@media screen and (max-width:740px){
+#filter ul {display:none;}	
+}
+
+
+@media screen and (max-width:740px){
+h2#calendarTitle {display:block;}
+} 
+
+
 #calendarTitle {
+	display:none;
 	font-family:Maven Pro;
 	text-align: center;
-	display: block; 
 	line-height: 35px; 
 	color: #6DBCDB; 
 	font-size: 15px; 
@@ -459,11 +479,12 @@ html[xmlns] .slides {display: block;}
 #loadMore a {color: #f8f8f8; line-height: 45px;}
 #loadMore a:hover {color: #f8f8f8;}
 
-#filter ul {list-style: none;}
-#filter li {display: inline; font-size: 10px; line-height: 48px; margin: 0 8px 0 0; }
-#filter li a {color: #aaa; text-transform: uppercase; line-height: 48px; display: inline-block;}
+#filter ul {list-style:none;}
+#filter li {display: inline; font-size: 13px; line-height: 48px; margin: 0 8px 0 0; }
+#filter li a {text-transform: uppercase; line-height: 48px; display: inline-block;}
 #filter li a:hover,
 #filter li a.active {color: #fff;}
+#slash {color:#FC5C47;}
 
 #filter {position:relative;}
 #filter.sticky {z-index: 2000; width: 100%}
