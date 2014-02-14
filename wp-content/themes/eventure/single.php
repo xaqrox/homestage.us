@@ -79,7 +79,7 @@ if(in_category($eventCat)){ echo '<div itemscope itemtype="http://data-vocabular
 					<?php if($ages){?><i class="icon-group"></i><?php echo $ages; ?><br /><?php } ?>
 					<?php if($link){?><i class="icon-link"></i><a target="_blank" href="<?php echo $link; ?>"><?php echo $link; ?></a><br /><?php } ?>
 					<i class="icon-folder-close"></i><?php the_category(', '); ?><br />
-					<i class="icon-user"></i><?php the_author(); ?><br />
+					<!-- REMOVING THE AUTHOR <i class="icon-user"></i><?php the_author(); ?><br /> -->
 					<i class="icon-comment"></i><?php comments_popup_link(__('0 Comments','themolitor'), __('1 Comment','themolitor'), __('% Comments','themolitor')); ?><br />
 				</div>
 			</li>

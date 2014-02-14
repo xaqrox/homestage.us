@@ -21,6 +21,11 @@ this.molitorscripts = function () {
 	});
 	jQuery('#filter li').not(':first').prepend("<span id='slash'>/</span> &nbsp;&nbsp;&nbsp;");
 	
+	//GA EVENTS ON FILTER CLICKS
+	filterLink.click(function(){
+		ga('send', 'event', 'Filter', jQuery(this).html());
+	});
+	
 
 	//MENU
 	jQuery("#dropmenu a").removeAttr("title");
