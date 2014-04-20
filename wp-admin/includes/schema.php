@@ -327,11 +327,15 @@ $wp_queries = wp_get_db_schema( 'all' );
  * @uses $wp_db_version
  */
 function populate_options() {
-	global $wpdb, $wp_db_version, $current_site, $wp_current_db_version;
+	global $wpdb, $wp_db_version, $wp_current_db_version;
 
 	$guessurl = wp_guess_url();
-
-	do_action('populate_options');
+	/**
+	 * Fires before creating WordPress options and populating their default values.
+	 *
+	 * @since 2.6.0
+	 */
+	do_action( 'populate_options' );
 
 	if ( ini_get('safe_mode') ) {
 		// Safe mode can break mkdir() so use a flat structure by default.
@@ -388,9 +392,6 @@ function populate_options() {
 	'time_format' => __('g:i a'),
 	/* translators: links last updated date format, see http://php.net/date */
 	'links_updated_date_format' => __('F j, Y g:i a'),
-	'links_recently_updated_prepend' => '<em>',
-	'links_recently_updated_append' => '</em>',
-	'links_recently_updated_time' => 120,
 	'comment_moderation' => 0,
 	'moderation_notify' => 1,
 	'permalink_structure' => '',
@@ -491,7 +492,7 @@ function populate_options() {
 	// 3.0 multisite
 	if ( is_multisite() ) {
 		/* translators: blog tagline */
-		$options[ 'blogdescription' ] = sprintf(__('Just another %s site'), $current_site->site_name );
+		$options[ 'blogdescription' ] = sprintf(__('Just another %s site'), get_current_site()->site_name );
 		$options[ 'permalink_structure' ] = '/%year%/%monthnum%/%day%/%postname%/';
 	}
 
@@ -533,6 +534,7 @@ function populate_options() {
 		'links_rating_ignore_zero', 'links_rating_single_image', 'links_rating_image0', 'links_rating_image1',
 		'links_rating_image2', 'links_rating_image3', 'links_rating_image4', 'links_rating_image5',
 		'links_rating_image6', 'links_rating_image7', 'links_rating_image8', 'links_rating_image9',
+		'links_recently_updated_time', 'links_recently_updated_prepend', 'links_recently_updated_append',
 		'weblogs_cacheminutes', 'comment_allowed_tags', 'search_engine_friendly_urls', 'default_geourl_lat',
 		'default_geourl_lon', 'use_default_geourl', 'weblogs_xml_url', 'new_users_can_blog', '_wpnonce',
 		'_wp_http_referer', 'Update', 'action', 'rich_editing', 'autosave_interval', 'deactivated_plugins',
@@ -551,20 +553,18 @@ function populate_options() {
 	// The multi-table delete syntax is used to delete the transient record from table a,
 	// and the corresponding transient_timeout record from table b.
 	$time = time();
-	$wpdb->query("WITH bx AS (DELETE FROM $wpdb->options a USING $wpdb->options b WHERE
-		a.option_name LIKE '\_transient\_%' AND
-		a.option_name NOT LIKE '\_transient\_timeout\_%' AND
-		b.option_name = CONCAT( '_transient_timeout_', SUBSTRING( a.option_name, 12 ) )
-		AND b.option_value < text($time) RETURNING b.option_id)
-		DELETE FROM wp_options WHERE option_id in (select option_id from bx)");
+	$wpdb->query("DELETE a, b FROM $wpdb->options a, $wpdb->options b WHERE
+	        a.option_name LIKE '\_transient\_%' AND
+	        a.option_name NOT LIKE '\_transient\_timeout\_%' AND
+	        b.option_name = CONCAT( '_transient_timeout_', SUBSTRING( a.option_name, 12 ) )
+	        AND b.option_value < $time");
 
 	if ( is_main_site() && is_main_network() ) {
-		$wpdb->query("WITH bx AS (DELETE FROM $wpdb->options a USING $wpdb->options b WHERE
+		$wpdb->query("DELETE a, b FROM $wpdb->options a, $wpdb->options b WHERE
 			a.option_name LIKE '\_site\_transient\_%' AND
 			a.option_name NOT LIKE '\_site\_transient\_timeout\_%' AND
 			b.option_name = CONCAT( '_site_transient_timeout_', SUBSTRING( a.option_name, 17 ) )
-			AND b.option_value < text($time) RETURNING b.option_id)
-			DELETE FROM wp_options WHERE option_id in (select option_id from bx)");
+			AND b.option_value < $time");
     }
 }
 
@@ -843,13 +843,13 @@ function install_network() {
 endif;
 
 /**
- * populate network settings
+ * Populate network settings.
  *
  * @since 3.0.0
  *
- * @param int $network_id id of network to populate
+ * @param int $network_id ID of network to populate.
  * @return bool|WP_Error True on success, or WP_Error on warning (with the install otherwise successful,
- * 	so the error code must be checked) or failure.
+ *                       so the error code must be checked) or failure.
  */
 function populate_network( $network_id = 1, $domain = '', $email = '', $site_name = '', $path = '/', $subdomain_install = false ) {
 	global $wpdb, $current_site, $wp_db_version, $wp_rewrite;
@@ -886,6 +886,8 @@ function populate_network( $network_id = 1, $domain = '', $email = '', $site_nam
 	} else {
 		$wpdb->insert( $wpdb->site, array( 'domain' => $domain, 'path' => $path, 'id' => $network_id ) );
 	}
+
+	wp_cache_delete( 'networks_have_paths', 'site-options' );
 
 	if ( !is_multisite() ) {
 		$site_admins = array( $site_user->user_login );
@@ -947,8 +949,8 @@ We hope you enjoy your new site. Thanks!
 	 *
 	 * @since 3.7.0
 	 *
-	 * @param array $sitemeta Associative of meta keys and values to be inserted.
-	 * @param int $network_id Network ID being created.
+	 * @param array $sitemeta   Associative array of network meta keys and values to be inserted.
+	 * @param int   $network_id ID of network to populate.
 	 */
 	$sitemeta = apply_filters( 'populate_network_meta', $sitemeta, $network_id );
 
