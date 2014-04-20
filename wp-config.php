@@ -14,7 +14,50 @@
  * @package WordPress
  */
 
-// ** Heroku Postgres settings - from Heroku Environment ** //
+//function to check if you're on the local environment or not.  Returns false by default, true if it detects the local environment
+function devIsLocal(){
+
+    $res=false;
+
+    $http_host=$_SERVER['HTTP_HOST'];
+
+    if($http_host=='localhost')$res=true;
+    if($http_host=='127.0.0.1')$res=true;
+    if(substr($http_host,-4)=='.lan')$res=true;
+    if(strpos($http_host, '.')===false)$res=true;
+    if('127.0.0.1'==$_SERVER["REMOTE_ADDR"])$res=true;
+
+    return($res);
+
+}
+
+$enviro = devIsLocal();
+
+if($enviro==true){
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define('DB_NAME', 'homestagelocal');
+
+/** MySQL database username */
+define('DB_USER', 'root');
+
+/** MySQL database password */
+define('DB_PASSWORD', 'root');
+
+/** MySQL hostname */
+define('DB_HOST', 'localhost');
+
+/** Database Charset to use in creating database tables. */
+define('DB_CHARSET', 'utf8');
+
+/** The Database Collate type. Don't change this if in doubt. */
+define('DB_COLLATE', '');
+}
+
+else
+
+{
+
 $db = parse_url($_ENV["DATABASE_URL"]);
 
 // ** MySQL settings - You can get this info from your web host ** //
@@ -36,6 +79,11 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
+};
+
+
+
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -45,14 +93,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '-~)lWF7D+IW=_{CyUG$P8ol`Ku: >[H$+]HZ$KM2!Yj(vr -<WCoD]EX+kli3=U`');
-define('SECURE_AUTH_KEY',  'x?QkzIXH#?o6tKbm^|kLcf)$^lcmiTR D_y|Cl M=jrk42}|+FYHYAO<Ps5A~Mzb');
-define('LOGGED_IN_KEY',    'cl K-fm3r3<E{s_VjJ+U?)NHSDXx*|p[%|<f{b<x@gP<2;dk3n|H-@yB8sQj!5A&');
-define('NONCE_KEY',        'bwmb%-J6q{.G?DS3|8M, +Td{2TrGs^iu,g1#O=CX[+G`I9QjP48(R0z^+5Z$#O^');
-define('AUTH_SALT',        'EWZ$hH`9XQ~B`gX9B7PtY2KZre21[d2.Pxidf:1oZ+1h3/TagJRKRa98E[Oc~s2F');
-define('SECURE_AUTH_SALT', '},94QzNn<Jm%j*RWQl}WCN+[ac+DS~?N<EKJrrPzSK-&c?-PW)RftO67-R(l(9!^');
-define('LOGGED_IN_SALT',   '~TM-6q;=G40qem(v7&A$6LUM(G:>Qx6& 1bHd{5eq%j5`+g@]Ajow?[`&j*$C]7I');
-define('NONCE_SALT',       ')2W$6Z<qA~{t~R,Lz#bqZXZ{$wj]_25_-#[?!Q+Isndzyc:-S-yPymo8[m|3|Ut.');
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
 
 /**#@-*/
 
