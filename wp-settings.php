@@ -40,7 +40,7 @@ wp_check_php_mysql_versions();
 @ini_set( 'magic_quotes_sybase',  0 );
 
 // WordPress calculates offsets from UTC.
-date_default_timezone_set( 'UTC' );
+date_default_timezone_set( 'America/New_York' );
 
 // Turn register_globals off.
 wp_unregister_GLOBALS();
