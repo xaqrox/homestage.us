@@ -5,6 +5,7 @@ inspired by http://codex.wordpress.org/Running_a_Development_Copy_of_WordPress
 Author: @khbites
 */
 
+
 add_filter ( 'pre_option_home', 'test_localhosts' );
 add_filter ( 'pre_option_siteurl', 'test_localhosts' );
 function test_localhosts( ) {
@@ -28,6 +29,36 @@ Author URI: http://www.hawkix.net
 License: GPLv2 or newer.
 */
 
+//function to check if you're on the local environment or not.  Returns false by default, true if it detects the local environment
+/*
+function devIsLocal()
+{
+    $res=false;
+    $http_host=$_SERVER['HTTP_HOST'];
+    if($http_host=='localhost')$res=true;
+    if($http_host=='127.0.0.1')$res=true;
+    if(substr($http_host,-4)=='.lan')$res=true;
+    if(strpos($http_host, '.')===false)$res=true;
+    if('127.0.0.1'==$_SERVER["REMOTE_ADDR"])$res=true;
+    return($res);
+}
+
+$enviro=devIsLocal();
+
+if($enviro==false){
+*/
+
+
+
+/*
+*/
+
+
+/*
+if($enviro==false){
+*/
+
+
 if( !defined('PG4WP_ROOT'))
 {
 // You can choose the driver to load here
@@ -50,6 +81,26 @@ if( file_exists( ABSPATH.'/wp-content/pg4wp'))
 else
 	define( 'PG4WP_ROOT', ABSPATH.'/wp-content/plugins/pg4wp');
 
+
+function localdev()
+{
+    $res=false;
+    $http_host=$_SERVER['HTTP_HOST'];
+    if($http_host=='localhost')$res=true;
+    if($http_host=='127.0.0.1')$res=true;
+    if(substr($http_host,-4)=='.lan')$res=true;
+    if(strpos($http_host, '.')===false)$res=true;
+    if('127.0.0.1'==$_SERVER["REMOTE_ADDR"])$res=true;
+    return($res);
+}
+
+
+$locenviro=localdev();
+
+if($locenviro==false)
+{
 // Here happens all the magic
 require_once( PG4WP_ROOT.'/core.php');
-} // Protection against multiple loading
+// Protection against multiple loading
+}
+}
