@@ -202,7 +202,7 @@ if ( is_singular() ) wp_enqueue_script( "comment-reply" );
 	</div><!--end titlebar-->
 
 	<div id="callTo">
-		<h2 id="tagtext"><span id="thetag">The Source for DC DIY </span><a href="https://docs.google.com/forms/d/119qD3yZOrrcJ_EA1eqIBx9AUe-2Gbyxz8h4rOu-d3j0/viewform" target="_blank">GET INVOLVED</a></h2>
+		<h2 id="tagtext"><span id="thetag">The Source for DIY in DC </span><a href="https://docs.google.com/forms/d/119qD3yZOrrcJ_EA1eqIBx9AUe-2Gbyxz8h4rOu-d3j0/viewform" target="_blank">GET INVOLVED</a></h2>
 	</div>
 
 </div><!--end header-->
